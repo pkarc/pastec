@@ -24,13 +24,8 @@
 #include <sys/time.h>
 
 #include <set>
-#ifndef __APPLE__
-#include <tr1/unordered_set>
-#include <tr1/unordered_map>
-#else
 #include <unordered_set>
 #include <unordered_map>
-#endif
 #include <queue>
 
 #include <opencv2/highgui/highgui.hpp>
@@ -41,9 +36,6 @@
 #include <messages.h>
 #include <imageloader.h>
 
-#ifndef __APPLE__
-using namespace std::tr1;
-#endif
 
 ORBSearcher::ORBSearcher(ORBIndex *index, ORBWordIndex *wordIndex)
     : index(index), wordIndex(wordIndex)

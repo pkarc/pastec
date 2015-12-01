@@ -22,11 +22,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-#ifndef __APPLE__
-#include <jsoncpp/json/json.h>
-#else
 #include <json/json.h>
-#endif
 
 #include <requesthandler.h>
 #include <messages.h>

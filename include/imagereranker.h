@@ -26,13 +26,8 @@
 
 #include <queue>
 #include <list>
-#ifndef __APPLE__
-#include <tr1/unordered_map>
-#include <tr1/unordered_set>
-#else
 #include <unordered_map>
 #include <unordered_set>
-#endif
 
 #include <opencv2/core/core.hpp>
 
@@ -41,9 +36,6 @@
 #include <hit.h>
 
 using namespace std;
-#ifndef __APPLE__
-using namespace std::tr1;
-#endif
 using namespace cv;
 
 
