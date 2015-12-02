@@ -21,36 +21,17 @@
 
 #include <node.h>
 
-#include <orb/orbfeatureextractor.h>
-#include <orb/orbsearcher.h>
-#include <orb/orbwordindex.h>
+#include "pastec.h"
 
 namespace pastec {
 
-  using v8::FunctionCallbackInfo;
-  using v8::Isolate;
   using v8::Local;
   using v8::Object;
-  using v8::String;
-  using v8::Value;
 
-  string visualWordPath = "visualWordsORB.dat";
-  string indexPath("backwardIndex.dat");
-
-  Index *index = new ORBIndex(indexPath);
-  ORBWordIndex *wordIndex = new ORBWordIndex(visualWordPath);
-  FeatureExtractor *ife = new ORBFeatureExtractor((ORBIndex *)index, wordIndex);
-  Searcher *is = new ORBSearcher((ORBIndex *)index, wordIndex);
-
-  void Method(const FunctionCallbackInfo<Value>& args) {
-    Isolate* isolate = args.GetIsolate();
-    args.GetReturnValue().Set(String::NewFromUtf8(isolate, "world"));
+  void InitAll(Local<Object> exports) {
+    Pastec::Init(exports);
   }
 
-  void init(Local<Object> exports) {
-    NODE_SET_METHOD(exports, "hello", Method);
-  }
-
-  NODE_MODULE(pastec, init)
+  NODE_MODULE(pastec, InitAll)
 
 }  // namespace demo

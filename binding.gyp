@@ -3,6 +3,7 @@
         "target_name": "pastec",
         "sources": [
             "src/node.cpp",
+            "src/pastec.cpp",
             "src/imageloader.cpp",
             "src/imagereranker.cpp",
             "src/imagererankerransac.cpp",
