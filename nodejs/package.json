@@ -1,0 +1,22 @@
+{
+  "name": "pastec-node",
+  "version": "0.1.0",
+  "description": "pastec image recognition",
+  "main": "appServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkarc/pastec.git"
+  },
+  "author": "Ivan Jaramillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pkarc/pastec/issues"
+  },
+  "homepage": "https://github.com/pkarc/pastec#readme",
+  "dependencies": {
+    "restify": "^4.0.3"
+  }
+}
